@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", SansSerif;
+}
+body {
+  background-color: white;
+  background-size: 300% 300%;
+  animation: color 4s infinite linear;
+  background-image: linear-gradient(
+          -45deg,
+          rgba(59,173,227,1) 0%,
+          rgba(87,111,230,1) 25%,
+          rgba(152,68,183,1) 50%,
+          rgba(255,53,127,1) 100%
+  );
+}
+@keyframes color {
+  0%{background-position: 0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position: 0% 50%}
+}
+
+.portfolio-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1000px;
+  background-color: #FBF8F3;
+  margin: 50px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+.container .left_side {
+  position: relative;
+  /*background-color: #4f3b78;*/
+  background-color: #232323;
+  padding: 40px;
+}
+.profileText {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.profileText .imgBx {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profileText .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profileText .imgBx img:hover {
+  border-radius: 50%;
+  animation: vibrate 3s infinite;
+}
+@keyframes vibrate {
+  0% {transform: rotate(0deg)}
+  10% {transform: rotate(10deg)}
+  20% {transform: rotate(-10deg)}
+  30% {transform: rotate(0deg)}
+  50% {transform: rotate(30deg)}
+  100% {transform: rotate(360deg)}
+}
+.photo {
+  width: 100%;
+  height: auto;
+}
+.profileText h2 {
+  color: #fff;
+  font-size: 1.5em;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+.profileText h2 span {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+.contactInfo {
+  padding-top: 40px;
+}
+.title {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.contactInfo ul {
+  position: relative;
+}
+.contactInfo ul li {
+  list-style: none;
+  position: relative;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.contactInfo ul li .icon {
+  display: inline-block;
+  width: 30px;
+  font-size: 18px;
+  color: #EEE7CE;
+}
+.contactInfo ul li .icon i:hover {
+  animation: icon-move 2s infinite;
+}
+@keyframes icon-move {
+  0% {transform: rotate(0deg)}
+  50% {transform: rotate(180deg)}
+  100% {transform: rotate(359deg)}
+}
+
+.contactInfo ul li .text {
+  width: 100%;
+  font-size: 14px;
+  color: #EEE7CE;
+}
+.contactInfo ul li span {
+  color: #fff;
+  font-weight: 300;
+}
+.contactInfo.education li {
+  margin-bottom: 15px;
+}
+.contactInfo.education h5 {
+  color: #EEE7CE;
+  font-weight: 500;
+}
+.contactInfo.education h4:nth-child(2) {
+  color: #fff;
+  font-weight: 500;
+}
+.contactInfo.education h4 {
+  color: #fff;
+  font-weight: 300;
+}
+.contactInfo.language .percent {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background-color: #081921;
+  display: block;
+  margin-top: 5px;
+}
+.contactInfo.language .percent div {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #EEE7CE;
+}
+.container .right_side {
+  position: relative;
+  background-color: #EEE7CE;
+  padding: 40px;
+}
+.about {
+  margin-bottom: 50px;
+}
+.about:last-child {
+  margin-bottom: 0;
+}
+.title2 {
+  color: #003147;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+p {
+  color: #081921;
+}
+.about .box {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+}
+.about .box .year_company {
+  min-width: 150px;
+}
+.about .box .year_company h5 {
+  text-transform: uppercase;
+  color: #848c90;
+  font-weight: 600;
+}
+.about .box .text h4 {
+  text-transform: uppercase;
+  color: #232323;
+  font-size: 16px;
+}
+.skills .box {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.skills .box h4 {
+  text-transform: uppercase;
+  color: #848c90;
+  font-weight: 500;
+}
+.skills .box .percent {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background-color: #f0f0f0;
+}
+.skills .box .percent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #232323;
+}
+.interest ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.interest ul li {
+  list-style: none;
+  color: black;
+  font-weight: 500;
+  margin: 10px 0;
+}
+.interest ul li .fa {
+  color: #232323;
+  font-size: 18px;
+  width: 20px;
+}
+.interest ul li i:hover {
+  animation: icon-move 2s infinite;
+}
+@keyframes icon-move {
+  0% {transform: rotate(0deg)}
+  50% {transform: rotate(180deg)}
+  100% {transform: rotate(359deg)}
+}
+.kyrlng100 {
+  width: 100%;
+}
+.englishlng80 {
+  width: 80%;
+}
+.russialng80 {
+  width: 80%;
+}
+.turlng50 {
+  width: 50%;
+}
+.pythonskill80 {
+  width: 80%;
+}
+.djangoskill75 {
+  width: 75%;
+}
+.postgresqlskill60{
+  width: 60%;
+}
+.javaskill30 {
+  width: 30%;
+}
+.htmlskill70 {
+  width: 70%;
+}
+.cssskill60 {
+  width: 60%;
+}
+.photoshopskill65 {
+  width: 65%;
+}
+.problem-solvingskill70 {
+  width: 70%;
+}
+.teamworkskill80 {
+  width: 80%;
+}
