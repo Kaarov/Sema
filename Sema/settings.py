@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'user.apps.UserConfig',
+    'Gallery.apps.GalleryConfig',
 ]
 
 USE_DJANGO_JQUERY = True
