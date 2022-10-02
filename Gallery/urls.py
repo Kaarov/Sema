@@ -10,5 +10,7 @@ from Gallery.views import *
 # router.register(r'category', CategoryViewSet)
 
 urlpatterns = [
-    path('', gallery, name='gallery'),
+    path('category/', gallery_category, name='gallery_category'),
+    path('subcategory/<int:sub>/', gallery_subcategory, name='gallery_subcategory'),
+    path('image/<int:i>/', gallery_image, name="gallery_image"),
 ]

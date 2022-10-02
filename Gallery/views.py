@@ -2,13 +2,23 @@ from django.shortcuts import render
 from Gallery.models import *
 
 
-def gallery(request):
+def gallery_category(request):
     category = Category.objects.all().order_by('name')
-    subcategory = SubCategory.objects.all().order_by('name')
-    images = Images.objects.all().order_by('name')
     context = {
-        'images': images,
         'category': category,
-        'subcategory': subcategory,
     }
-    return render(request, 'Gallery/gallery.html', context=context)
+    return render(request, 'Gallery/gallery_category.html', context=context)
+
+
+def gallery_subcategory(request, sub):
+    subcategory = SubCategory.objects.filter(category__id=sub)
+    return render(request, 'Gallery/gallery_subcategory.html', context={
+        'subcategory': subcategory,
+    })
+
+
+def gallery_image(request, i):
+    image = Images.objects.filter(subcategory_id=i)
+    return render(request, 'Gallery/gallery_subcategory.html', context={
+        'image': image,
+    })

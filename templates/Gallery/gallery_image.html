@@ -24,15 +24,15 @@
                 <div class="col-lg-8">
                     <div class="row pb-3">
 
-                        {% for c in category %}
+                        {% for i in image %}
                             <div class="col-lg-6 mb-4">
                                 <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                                    {% if c.image %}
-                                        <img class="img-fluid" src="{{ c.image.url }}" alt="">
+                                    {% if i.image %}
+                                        <img class="img-fluid" src="{{ i.image.url }}" alt="">
                                     {% endif %}
                                     <a class="blog-overlay text-decoration-none" href="">
-                                        <h5 class="text-white mb-3">{{ c.name }}</h5>
-                                        <p class="text-primary m-0">{{ c.created }}</p>
+                                        <h5 class="text-white mb-3">{{ i.name }}</h5>
+                                        <p class="text-primary m-0">{{ i.created }}</p>
                                     </a>
                                 </div>
                             </div>
