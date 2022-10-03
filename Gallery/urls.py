@@ -2,12 +2,13 @@ from django.conf.urls import url
 from django.urls import path, include
 from Gallery.views import *
 
+# app_name = 'image'
+
 # from rest_framework import routers
-
-# app_name = 'shopping'
-
 # router = routers.DefaultRouter()
 # router.register(r'category', CategoryViewSet)
+
+# 127.0.0.1:8000/gallery/
 
 urlpatterns = [
     # Template
